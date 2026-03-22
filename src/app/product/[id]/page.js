@@ -60,7 +60,7 @@ export default function ProductDetails() {
       .then(data => {
         if (data && !data.error) {
           setProduct(data);
-          setMainImage(data.image || '');
+          setMainImage(data.images?.[0] || data.image || '');
         }
         setLoading(false);
       })
@@ -154,14 +154,14 @@ export default function ProductDetails() {
               </button>
             </div>
 
-            {/* Thumbnail Gallery (if multiple images exists) */}
-            {(product.image2 || product.image) && (
-               <div className="flex gap-4 animate__animated animate__fadeInUp animate__delay-1s">
-                  {[product.image, product.image2].filter(Boolean).map((img, idx) => (
+            {/* Thumbnail Gallery */}
+            {product.images && product.images.length > 1 && (
+               <div className="flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-1s">
+                  {product.images.map((img, idx) => (
                     <div 
                       key={idx}
                       onClick={() => setMainImage(img)}
-                      className={`w-24 h-24 bg-brand-cream/30 border-2 rounded-sm cursor-pointer overflow-hidden transition-all duration-500 ${mainImage === img ? 'border-brand-gold shadow-lg' : 'border-transparent opacity-60 hover:opacity-100'}`}
+                      className={`w-20 h-20 bg-brand-cream/30 border-2 rounded-sm cursor-pointer overflow-hidden transition-all duration-300 ${mainImage === img ? 'border-brand-gold shadow-lg scale-105' : 'border-transparent opacity-60 hover:opacity-100 hover:border-brand-cream'}`}
                     >
                         <img src={img} alt={`${product.name} view ${idx+1}`} className="w-full h-full object-cover" />
                     </div>
@@ -225,7 +225,7 @@ export default function ProductDetails() {
                     onChange={e => { setPincode(e.target.value.replace(/\D/g, '')); setPincodeStatus(null); }}
                     onKeyDown={e => e.key === 'Enter' && checkPincode()}
                     placeholder="Enter 6-digit pincode"
-                    className="flex-1 border-b border-brand-cream focus:border-brand-gold bg-transparent py-2 text-[11px] font-bold tracking-widest text-brand-charcoal placeholder:text-gray-300 focus:outline-none transition-colors"
+                    className="flex-1 border border-gray-200 rounded-sm px-4 py-2.5 text-sm font-medium text-brand-charcoal placeholder:text-gray-400 focus:outline-none focus:border-brand-gold transition-colors bg-white"
                   />
                   <button
                     onClick={checkPincode}

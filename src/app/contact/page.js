@@ -48,25 +48,25 @@ export default function ContactUs() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-3 border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-colors">
-                  <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-400">Given Name</label>
-                  <input required type="text" className="w-full bg-transparent py-2 focus:outline-none text-brand-charcoal text-xs font-medium tracking-widest placeholder:text-gray-200 uppercase" placeholder="First Name" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-1.5">
+                  <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-500">Given Name</label>
+                  <input required type="text" className="w-full border border-gray-200 rounded-sm px-4 py-3 bg-white text-brand-charcoal text-sm font-medium placeholder:text-gray-400 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Enter your first name" />
                 </div>
-                <div className="space-y-3 border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-colors">
-                  <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-400">Surname</label>
-                  <input required type="text" className="w-full bg-transparent py-2 focus:outline-none text-brand-charcoal text-xs font-medium tracking-widest placeholder:text-gray-200 uppercase" placeholder="Last Name" />
+                <div className="space-y-1.5">
+                  <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-500">Surname</label>
+                  <input required type="text" className="w-full border border-gray-200 rounded-sm px-4 py-3 bg-white text-brand-charcoal text-sm font-medium placeholder:text-gray-400 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Enter your last name" />
                 </div>
               </div>
               
-              <div className="space-y-3 border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-colors">
-                <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-400">Email Correspondence</label>
-                <input required type="email" className="w-full bg-transparent py-2 focus:outline-none text-brand-charcoal text-xs font-medium tracking-widest placeholder:text-gray-200" placeholder="jane.doe@luxury.com" />
+              <div className="space-y-1.5">
+                <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-500">Email Address</label>
+                <input required type="email" className="w-full border border-gray-200 rounded-sm px-4 py-3 bg-white text-brand-charcoal text-sm font-medium placeholder:text-gray-400 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Enter your email address" />
               </div>
 
-              <div className="space-y-3 border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-colors">
-                <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-400">Your Inquiry</label>
-                <textarea required rows="3" className="w-full bg-transparent py-2 focus:outline-none text-brand-charcoal text-xs font-medium tracking-widest placeholder:text-gray-200 resize-none uppercase" placeholder="Tell us more about your requirements..."></textarea>
+              <div className="space-y-1.5">
+                <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-500">Your Message</label>
+                <textarea required rows="4" className="w-full border border-gray-200 rounded-sm px-4 py-3 bg-white text-brand-charcoal text-sm font-medium placeholder:text-gray-400 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="Tell us how we can help you..."></textarea>
               </div>
 
               <div className="pt-4 opacity-80 hover:opacity-100 transition-opacity">
@@ -105,7 +105,7 @@ export default function ContactUs() {
                 </div>
                 <div className="space-y-2">
                   <a href="tel:+917906034247" className="text-gray-500 text-[10px] font-bold tracking-[0.2em] uppercase hover:text-brand-gold transition-colors block">+91 7906034247</a>
-                  <a href="mailto:kridhastore@gmail.com" className="text-gray-500 text-[10px] font-bold tracking-[0.2em] hover:text-brand-gold transition-colors block lowercase">kridhastore@gmail.com</a>
+                  <a href="mailto:kridhastore561@gmail.com" className="text-gray-500 text-[10px] font-bold tracking-[0.2em] hover:text-brand-gold transition-colors block lowercase">kridhastore561@gmail.com</a>
                 </div>
               </div>
             </div>

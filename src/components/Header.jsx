@@ -239,7 +239,13 @@ export default function Header() {
               {/* User */}
               <div className="hidden lg:flex relative group/user items-center cursor-pointer">
                 <Link href={mounted && userInfo ? "/profile" : "/login"} className={`flex items-center group hover:text-brand-gold transition-all ${isHero ? 'text-white/80' : 'text-brand-charcoal'}`}>
-                  <User className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={1.5} />
+                  {mounted && userInfo ? (
+                    <div className="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white text-[11px] font-bold uppercase tracking-wide shadow-sm">
+                      {userInfo.name?.charAt(0) || 'U'}
+                    </div>
+                  ) : (
+                    <User className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={1.5} />
+                  )}
                 </Link>
                 {mounted && userInfo && (
                   <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover/user:opacity-100 group-hover/user:visible transition-all duration-300 z-50">
@@ -291,7 +297,14 @@ export default function Header() {
                  <Link href="/contact" onClick={() => setIsOpen(false)} className="block text-2xl font-serif uppercase tracking-tight text-brand-charcoal hover:text-brand-gold transition-colors">Contact Us</Link>
                  <div className="pt-8 border-t border-gray-100 flex flex-col gap-6">
                     <Link href={mounted && userInfo ? "/profile" : "/login"} onClick={() => setIsOpen(false)} className="text-xs font-bold uppercase tracking-widest text-brand-charcoal flex items-center gap-2">
-                       <User className="w-4 h-4" /> {mounted && userInfo ? userInfo.name.split(' ')[0] : 'Login / Register'}
+                       {mounted && userInfo ? (
+                         <div className="w-7 h-7 rounded-full bg-brand-gold flex items-center justify-center text-white text-[10px] font-bold">
+                           {userInfo.name?.charAt(0) || 'U'}
+                         </div>
+                       ) : (
+                         <User className="w-4 h-4" />
+                       )}
+                       {mounted && userInfo ? userInfo.name.split(' ')[0] : 'Login / Register'}
                     </Link>
                     <Link href="/wishlist" onClick={() => setIsOpen(false)} className="text-xs font-bold uppercase tracking-widest text-brand-charcoal flex items-center gap-2">
                        <Heart className="w-4 h-4" /> Wishlist

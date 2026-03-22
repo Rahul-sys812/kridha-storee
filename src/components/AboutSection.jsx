@@ -18,6 +18,7 @@ export default function AboutSection() {
                 alt="About Kridha Luxe" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-[3s] scale-105 hover:scale-100"
               />
+            
             </div>
             {/* Decorative block */}
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-brand-cream -z-10 hidden md:block"></div>

@@ -35,13 +35,13 @@ export default function Footer() {
             
             <div className="pt-4">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-brand-charcoal">Join Our Newsletter</h4>
-              <div className="flex items-center max-w-xs border-b border-gray-200 pb-2 focus-within:border-brand-gold transition-colors">
+              <div className="flex items-center max-w-xs border border-gray-200 rounded-sm overflow-hidden focus-within:border-brand-gold transition-colors">
                 <input 
                   type="email" 
                   placeholder="Enter your email address"
-                  className="w-full bg-transparent text-[11px] outline-none placeholder:text-gray-400 text-gray-700" 
+                  className="w-full bg-white px-3 py-2.5 text-[11px] outline-none placeholder:text-gray-400 text-gray-700" 
                 />
-                <button className="text-[9px] font-bold uppercase tracking-widest text-brand-charcoal hover:text-brand-gold transition-colors pl-4">
+                <button className="text-[9px] font-bold uppercase tracking-widest text-white bg-brand-charcoal hover:bg-brand-gold transition-colors px-4 py-2.5 shrink-0">
                   Subscribe
                 </button>
               </div>
@@ -117,11 +117,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:kridhastore@gmail.com" className="flex items-center space-x-4 group cursor-pointer">
+                <a href="mailto:kridhastore561@gmail.com" className="flex items-center space-x-4 group cursor-pointer">
                   <div className="w-8 h-8 flex items-center justify-center rounded-full bg-brand-cream group-hover:bg-brand-gold/10 transition-colors">
                     <Mail className="w-3.5 h-3.5 text-brand-gold" />
                   </div>
-                  <span className="text-gray-600 text-[10px] font-bold tracking-widest group-hover:text-brand-gold transition-colors lowercase">kridhastore@gmail.com</span>
+                  <span className="text-gray-600 text-[10px] font-bold tracking-widest group-hover:text-brand-gold transition-colors lowercase">kridhastore561@gmail.com</span>
                 </a>
               </li>
             </ul>

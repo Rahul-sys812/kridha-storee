@@ -63,62 +63,62 @@ export default function Signup() {
 
         <form className="space-y-6" onSubmit={submitHandler}>
           <div className="space-y-8">
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
-              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400 ml-1 mb-2 block">Full Name</label>
-              <div className="flex items-center gap-4">
-                  <User className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+            <div className="relative group">
+              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500 ml-1 mb-2 block">Full Name</label>
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <User className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="text" 
                     required 
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs uppercase tracking-widest placeholder:text-gray-200" 
-                    placeholder="JANE DOE" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Enter your full name" 
                   />
               </div>
             </div>
 
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
-              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400 ml-1 mb-2 block">Electronic Mail</label>
-              <div className="flex items-center gap-4">
-                  <Mail className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+            <div className="relative group">
+              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500 ml-1 mb-2 block">Email Address</label>
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <Mail className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="email" 
                     required 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs uppercase tracking-widest placeholder:text-gray-200" 
-                    placeholder="NAME@BOUTIQUE.COM" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Enter your email address" 
                   />
               </div>
             </div>
 
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
-              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400 ml-1 mb-2 block">Security Key</label>
-              <div className="flex items-center gap-4">
-                  <Lock className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+            <div className="relative group">
+              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500 ml-1 mb-2 block">Password</label>
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <Lock className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="password" 
                     required 
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs tracking-[0.5em] placeholder:text-gray-200" 
-                    placeholder="••••••••" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Create a password" 
                   />
               </div>
             </div>
 
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
-              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400 ml-1 mb-2 block">Verify Security Key</label>
-              <div className="flex items-center gap-4">
-                  <ShieldCheck className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+            <div className="relative group">
+              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500 ml-1 mb-2 block">Confirm Password</label>
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <ShieldCheck className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="password" 
                     required 
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs tracking-[0.5em] placeholder:text-gray-200" 
-                    placeholder="••••••••" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Confirm your password" 
                   />
               </div>
             </div>

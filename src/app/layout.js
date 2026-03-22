@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import PageLoader from "@/components/PageLoader";
 
 export const metadata = {
   title: "Kridha Luxe | Luxury Silver Jewellery Boutique",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
             <div className="min-h-screen flex flex-col font-sans text-brand-charcoal overflow-x-hidden">
               <Header />
               <CartDrawer />
+              <PageLoader />
               <main className="flex-grow">
                 {children}
               </main>

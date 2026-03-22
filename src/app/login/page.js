@@ -60,35 +60,35 @@ function LoginForm() {
 
         <form className="space-y-8" onSubmit={submitHandler}>
           <div className="space-y-10">
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
-              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400 ml-1 mb-2 block">Electronic Mail</label>
-              <div className="flex items-center gap-4">
-                  <User className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+            <div className="relative group">
+              <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500 ml-1 mb-2 block">Email Address</label>
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <User className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="email" 
                     required 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs uppercase tracking-widest placeholder:text-gray-200" 
-                    placeholder="name@boutique.com" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Enter your email address" 
                   />
               </div>
             </div>
             
-            <div className="relative group border-b border-brand-cream pb-3 focus-within:border-brand-gold transition-all duration-500">
+            <div className="relative group">
               <div className="flex justify-between items-center ml-1 mb-2">
-                 <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400">Security Key</label>
-                 <a href="#" className="text-[8px] font-bold uppercase tracking-widest text-brand-gold hover:text-brand-charcoal transition-colors">Forgot Key?</a>
+                 <label className="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-500">Password</label>
+                 <a href="#" className="text-[8px] font-bold uppercase tracking-widest text-brand-gold hover:text-brand-charcoal transition-colors">Forgot Password?</a>
               </div>
-              <div className="flex items-center gap-4">
-                  <Lock className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors" />
+              <div className="flex items-center gap-3 border border-gray-200 rounded-sm px-4 py-3 bg-white focus-within:border-brand-gold transition-colors">
+                  <Lock className="w-4 h-4 text-gray-300 group-focus-within:text-brand-gold transition-colors shrink-0" />
                   <input 
                     type="password" 
                     required 
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full bg-transparent text-brand-charcoal font-sans font-medium focus:outline-none text-xs tracking-[0.5em] placeholder:text-gray-200" 
-                    placeholder="••••••••" 
+                    className="w-full bg-transparent text-brand-charcoal font-medium focus:outline-none text-sm placeholder:text-gray-400" 
+                    placeholder="Enter your password" 
                   />
               </div>
             </div>
